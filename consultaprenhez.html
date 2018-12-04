@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bovinaremos</title>
+    <meta charset="utf-8"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Bovinaremos</a>
+      </div>
+
+      <div class="collapse navbar-collapse" style="height: 100px">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-copy"></span> Cadastros <span class="caret "></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="cadastrobovino.html">Cadastro de Bovino</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="cadastroinseminacao.html">Cadastro de Inseminação</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Controles <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="gerenciamentoprenhez.html">Gerenciamento de Prenhez</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Relatórios <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="taxanatalidadeexemplar.html">Taxa de Natalidade Exemplar</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="classificacaoreproducaoexemplar.html">Classificação de Produtividade Exemplar</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h3 class="textos">Controle de Prenhez</h3><br>
+  <table>
+    <tr>
+      <th>ID bovino</th>
+      <th>ID inseminador</th>
+      <th>Data inseminação</th>
+      <th>Data prevista de nascimento</th>
+      <th>Observações</th>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>--/--/----</td>
+      <td>--/--/----</td>
+      <td>---------</td>
+    </tr>
+  </table><br><br>
+      <div class="centro">
+       <div class="form-group">
+        <form method="post" onsubmit="return false">
+            <label for="nascimento">Nascimento:</label>
+            <select id="nascimento" style="max-width: 110px" class="form-control" name="nascimento" required>
+              <option value="">Selecione</option>
+              <option value="vivo">Vivo</option>
+              <option value="morto">Morto</option>
+            </select><br>
+            <label for="nome">Observações pós-nascimento:</label>
+            <textarea class="form-control" id="obs" name="obs"></textarea><br>
+            <button onclick="pegadados();" type="submit" class="btn btn-success">Salvar</button>
+            <a style="float: right;" href="gerenciamentoprenhez.html"><button type="button" class="btn btn-default">Voltar</button></a>
+        </form>
+
+        <script type="text/javascript"> 
+          function pegadados(){
+            var opcao = document.getElementById('nascimento').value;
+            if (opcao=='vivo') {
+              alert("Prenhez completa, registre o novo bovino");
+              location.href = 'cadastrobovino2.html';
+            }
+            else if(opcao=='morto'){
+              alert("RIP Bezerrinho :(");
+              location.href = 'index.html';
+            }
+          }
+        </script>
+
+        </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

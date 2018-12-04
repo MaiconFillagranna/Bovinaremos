@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bovinaremos</title>
+    <meta charset="utf-8"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Bovinaremos</a>
+      </div>
+
+      <div class="collapse navbar-collapse" style="height: 100px">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-copy"></span> Cadastros <span class="caret "></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="cadastrobovino.html">Cadastro de Bovino</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="cadastroinseminacao.html">Cadastro de Inseminação</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Controles <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="gerenciamentoprenhez.html">Gerenciamento de Prenhez</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Relatórios <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="taxanatalidadeexemplar.html">Taxa de Natalidade Exemplar</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="classificacaoreproducaoexemplar.html">Classificação de Produtividade Exemplar</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <h3 class="textos">Consulta de Taxa de Nataliade Exemplar</h3><br>
+    <div style="width: 15%; min-width: 150px"> 
+      <div class="form-group">
+        <form action="taxanatalidadeexemplar2.html" method="post">
+            <label for="nome">ID do bovino:</label>
+            <input type="text" class="form-control" style="max-width: 200px" id="id" name="id" autofocus required maxlength="6" minlength="6" placeholder="ID do bovino"><br>
+            <button type="submit" class="btn btn-info">Consultar</button>
+        </form>
+      </div>
+    </div>
